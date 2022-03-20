@@ -7,14 +7,14 @@ buildHighcharterObject <- function(DATA=NULL,XT="X Values",YT="Y Values",MID=NUL
   stopifnot(!is.null(DATA),!is.null(MID))
   HC <- highchart() |>
     hc_yAxis(
-      title= YT,
+      title= list(text=YT),
       minorTickInterval = "auto",
       minorGridLineDashStyle = "Dot",
       showFirstLabel = FALSE,
       showLastLabel = TRUE) |>
 
     hc_xAxis(
-      title = XT,
+      title= list(text=XT),
       minorTickInterval = "auto",
       minorGridLineDashStyle = "Dot",
       showFirstLabel = TRUE,
